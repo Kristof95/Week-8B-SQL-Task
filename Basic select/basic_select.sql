@@ -1,0 +1,13 @@
+SELECT DISTINCT DEPARTMENT_ID FROM employees;
+SELECT * FROM employees ORDER BY FIRST_NAME DESC;
+SELECT SUM(SALARY) AS Payable_salary_to_employees FROM employees;
+SELECT MIN(SALARY) AS Minimum_salary, MAX(SALARY) AS Maximum_salary FROM employees;
+SELECT AVG(SALARY) AS Average_of_salary, COUNT(EMPLOYEE_ID) AS Number_of_employees FROM employees;
+SELECT COUNT(EMPLOYEE_ID) AS Number_of_employees_at_the_company FROM employees;
+SELECT COUNT(JOB_ID) AS Number_of_available_jobs FROM employees;
+SELECT UPPER(FIRST_NAME) AS First_Name_upper FROM employees;
+SELECT SUBSTRING(FIRST_NAME, 1,3) AS 3_characters_of_FIRST_NAME FROM employees;
+SELECT CONCAT(FIRST_NAME,' ',LAST_NAME) AS Full_name FROM employees;
+SELECT TRIM(' ' FROM FIRST_NAME) AS First_name_without_whitespaces FROM employees;
+SELECT LENGTH(CONCAT(FIRST_NAME,LAST_NAME)) AS Length_of_employee_names FROM employees;
+SELECT * FROM employees LIMIT 10;

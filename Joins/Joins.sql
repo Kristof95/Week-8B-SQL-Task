@@ -1,0 +1,5 @@
+SELECT * FROM locations NATURAL JOIN departments WHERE locations.LOCATION_ID = departments.LOCATION_ID;
+SELECT FIRST_NAME,LAST_NAME,DEPARTMENT_ID FROM employees NATURAL JOIN departments WHERE departments.DEPARTMENT_ID = employees.DEPARTMENT_ID;
+SELECT FIRST_NAME,LAST_NAME,departments.DEPARTMENT_ID,departments.DEPARTMENT_NAME, CITY FROM locations INNER JOIN departments ON departments.LOCATION_ID = locations.LOCATION_ID INNER JOIN employees ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID AND locations.CITY = 'London';
+SELECT DEPARTMENT_NAME, COUNT(*) AS Number_of_employees FROM departments INNER JOIN employees ON employees.DEPARTMENT_ID = departments.DEPARTMENT_ID GROUP BY DEPARTMENT_NAME;
+SELECT FIRST_NAME,LAST_NAME,HIRE_DATE FROM employees WHERE HIRE_DATE > (SELECT HIRE_DATE FROM employees WHERE LAST_NAME = 'Jones');
